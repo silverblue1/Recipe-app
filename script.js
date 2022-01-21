@@ -3,7 +3,6 @@ document.querySelector('body').onload = () => {
     renderRecipes();
 }
 
-let currentlyEditing = -1;
 
 let recipes = [
     {
@@ -48,6 +47,8 @@ let recipes = [
     }
 ];
 
+let currentlyEditing = recipes.length;
+
 // ref
 let recipesList = document.querySelector('.recipe-list');
 
@@ -74,7 +75,7 @@ const renderRecipes = () => {
             </div>
             <div>${recipe.body}</div>
             <button class="btn-edit" onclick="editItem(${recipe.id})">Edit</button>
-            <button class="btn-delete">Delete</button>
+            <button class="btn-delete" onclick="deleteItem(${recipe.id})">Delete</button>
             </div>
         `;
     })
@@ -88,12 +89,17 @@ const titleInput = document.querySelector('.recipe-title');
 const ingredientsInput = document.querySelector('.recipe-ingredients');
 const bodyInput = document.querySelector('.recipe-body');
 
-const editItem = (id, e) => {
+const editItem = (id) => {
     // e.preventDefault();
     console.log(id);
     currentlyEditing = id;
     setFormDefaults(); 
     setFormData(id);    
+}
+
+const deleteItem = (id) => {
+    recipes = recipes.filter(recipe => recipe.id !== id);
+    renderRecipes();
 }
 
 const setFormData = (id) => {
@@ -109,26 +115,27 @@ const setFormDefaults = () => {
     bodyInput.value = '';
 }
 
-function submitForm(e) {
+const submitForm = (e) => {
     e.preventDefault();
     if(currentlyEditing !== -1) {
-        recipes[currentlyEditing].title = titleInput.value;
-        recipes[currentlyEditing].ingredients = ingredientsInput.value.split(",");
-        recipes[currentlyEditing].body = bodyInput.value;
+        const newRecipe = {
+            title: titleInput.value,
+            ingredients: ingredientsInput.value.split(','),
+            body: bodyInput.value
+        }
+
+        recipes = [...recipes, newRecipe];
         
         // re-render
         renderRecipes();
         setFormDefaults();
     
         // currentlyEditing = -1
-        currentlyEditing = -1;
+        currentlyEditing = recipes.length;
     } else {
         console.log("Nothing to submit.")
     }
 }
-
-
-
 
 
 
