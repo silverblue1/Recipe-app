@@ -1,0 +1,128 @@
+:root {
+    --rounded-corner: .4rem;
+    --btn-font-size: 1.2rem;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* hero section */
+.hero {
+    width: 100vw;
+    height: 90vh;
+    background-color: #131313;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    color: #fff;
+}
+
+.add-recipe {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+}
+
+.add-recipe label {
+    color: #fff;
+}
+
+.add-recipe input {
+    border: none;
+    outline: none;
+    padding: .4rem .6rem;
+    width: 100%;
+    border-radius: var(--rounded-corner);
+}
+
+.btn-submit {
+    cursor: pointer;
+    padding: .4rem .6rem;
+    font-size: var(--btn-font-size);
+}
+
+.recipe-body {
+    border: none;
+    outline: none;
+    resize: none;
+    border-radius: var(--rounded-corner);
+    padding: 1.2rem;
+}
+
+/* recipes list */
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    max-width: 400px;
+    background-color: #ececec;
+    padding: 2rem;
+    border-radius: var(--rounded-corner);
+}
+
+.ingredients-list {
+    list-style-type: none;
+}
+
+.ingredients-list li.ingredients {
+    margin: 10px 0;
+}
+
+.recipe-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+button.btn-edit {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: .2rem .6rem;
+    color: #fff;
+    background-color: grey;
+    font-weight: bold;
+    font-size: var(--btn-font-size);
+    border-radius: var(--rounded-corner);
+}
+
+button.btn-delete {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: .2rem .6rem;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgb(255, 59, 59);
+    font-size: var(--btn-font-size);
+    border-radius: var(--rounded-corner);
+}
