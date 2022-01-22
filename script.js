@@ -119,6 +119,7 @@ const submitForm = (e) => {
     e.preventDefault();
     if(currentlyEditing !== -1) {
         const newRecipe = {
+            id: recipes.length,
             title: titleInput.value,
             ingredients: ingredientsInput.value.split(','),
             body: bodyInput.value
