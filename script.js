@@ -7,43 +7,30 @@ document.querySelector('body').onload = () => {
 let recipes = [
     {
         id: 0,
-        title: 'Awesome recipe',
+        title: 'Masala Cheese French Toast',
         ingredients: [
-            'apple',
-            'banana'
+            'bread',
+            'cheese'
         ],
-        body: 'This is an awesome smoothie'
+        body: 'Saucy bread and cheese sandwiches dipped in a herby egg white batter and pan fried. A quick and healthy option for your breakfast on-the-go or a mid night snack.'
     },
     {
         id: 1,
-        title: 'Awesome recipe 2',
+        title: 'Chilli Gobhi',
         ingredients: [
-            'apple',
-            'banana',
-            'mango'
+            'Cauliflower'
         ],
-        body: 'This is another awesome smoothie'
+        body: 'Spice is nice. Cauliflower florets cooked with an oriental tang. A quick serving for those unannounced guests! This delightful vegetarian recipe will help keep you hunger pangs away. It has a mix of spices that will ensure your palates are satisfied. '
     },
     {
         id: 2,
-        title: 'Awesome recipe 3',
+        title: 'Yogurt Crunch Pudding',
         ingredients: [
-            'apple',
-            'mango',
-            'pineapple'
+            'yogurt',
+            'honey',
+            'rose water'
         ],
-        body: 'This is another super awesome smoothie'
-    },
-    {
-        id: 3,
-        title: 'Awesome recipe 4',
-        ingredients: [
-            'apple',
-            'banana',
-            'mango',
-            'grapes'
-        ],
-        body: 'This is another mega awesome smoothie'
+        body: 'A breezy pudding to complete a lazy Sunday afternoon well spent. Impress all with this fuss free fruity dessert. What\'s better than having a crunchy and healthy dessert after a good meal? Nothing, we assure, as this recipe is bound to make you fall in love.'
     }
 ];
 

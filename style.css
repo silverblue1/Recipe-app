@@ -90,8 +90,9 @@
     list-style-type: none;
 }
 
-.ingredients-list li.ingredients {
+.ingredients-list li {
     margin: 10px 0;
+    font-weight: bold;
 }
 
 .recipe-hero {
